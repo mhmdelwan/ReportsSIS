@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- <div class="container mt-5 d-flex justify-content-between">
+        <div>
+            <input list="report" type="text" id="post" placeholder="نوع التقرير">
+        <datalist id="report">
+            <option value="مبيعات">مبيعات</option>
+            <option value="مشتريات">مشتريات</option>
+            <option value="خدمات">خدمات</option>
+            <option value="مبيعات">مبيعات</option>
+            <option value="حسابات">حسابات</option>
+            <option value="خزائن">خزائن</option>
+            <option value="عملاء">عملاء</option>
+            <option value="موردين">موردين</option>
+        </datalist>
+        </div>
+        <div>
+            <input list="rosy" type="text" id="morning" placeholder="الورديه">
+        <datalist id="rosy">
+            <option value="صباحي">صباحي</option>
+            <option value="مسائي">مسائي</option>
+        </datalist>
+        </div>
+        <div>
+            <input type="date" id="date" placeholder="من تاريخ">
+        </div>
+        <div>
+            <input type="date" id="dateTo" placeholder="الي تاريخ">
+        </div>
+        <div>
+            <input list="customers" type="text" id="customer" placeholder="عملاء\موردين">
+        <datalist id="customers">
+            <option value="عميل">عميل</option>
+            <option value="مورد">مورد</option>
+        </datalist>
+        </div>
+        <input type="button" id="btn1" value="show">
+        <p class="output" id="output1"></p>
+        <p class="output" id="output2"></p>
+        <p class="output" id="output3"></p>
+        <p class="output" id="output4"></p>
+        <p class="output" id="output5"></p>
+    </div> -->
+
+    <div class="container">
+        <header>التقارير</header>
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">التقارير الشخصيه</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="">التقارير</label>
+                            <input list="report" id="input1" type="text" placeholder="التقارير">
+                            <datalist id="report">
+                                <option value="مبيعات">مبيعات</option>
+                                <option value="مشتريات">مشتريات</option>
+                                <option value="خدمات">خدمات</option>
+                                <option value="مبيعات">مبيعات</option>
+                                <option value="حسابات">حسابات</option>
+                                <option value="خزائن">خزائن</option>
+                                <option value="عملاء">عملاء</option>
+                                <option value="موردين">موردين</option>
+                            </datalist>
+                        </div>
+                        <div class="input-field">
+                            <label for="">عميل\مورد</label>
+                            <input list="customers" id="input2" type="text" placeholder="عميل\مورد">
+                            <datalist id="customers">
+                                <option value="عميل">عميل</option>
+                                <option value="مورد">مورد</option>
+                            </datalist>
+                        </div>
+                        <div class="input-field">
+                            <label for="">المخزن</label>
+                            <input list="store" id="input3" type="text" placeholder="المخزن">
+                            <datalist id="store">
+                                <option value="رئيسي">رئيسي</option>
+                                <option value="فرعي">فرعي</option>
+                            </datalist>
+                        </div>
+                        <div class="input-field">
+                            <label for="">من تاريخ</label>
+                            <input id="fromDate" type="date" placeholder="من تاريخ">
+                        </div>
+                        <div class="input-field">
+                            <label for="">الي تاريخ</label>
+                            <input id="toDate" type="date" placeholder="الي تاريخ">
+                        </div>
+                        <div class="input-field">
+                            <label for="">الورديه</label>
+                            <input list="morning" id="input4" type="text" placeholder="الورديه">
+                            <datalist id="morning">
+                                <option value="صباحي">صباحي</option>
+                                <option value="مسائي">مسائي</option>
+                            </datalist>
+                        </div>
+                        <div class="input-field">
+                            <label for="">الموظف</label>
+                            <input list="employee" id="input5" type="text" placeholder="الموظف">
+                            <datalist id="employee">
+                                <option value="محمد">محمد</option>
+                                <option value="احمد">احمد</option>
+                            </datalist>
+                        </div>
+                    </div>
+      
+                    <input type="button" id="btn" class="py-1 px-3 mt-3" value="عرض">
+
+                    <div class="row p-3 mt-2  row-cols-2 row-cols-lg-5 g-2 g-lg-3 text-center">
+                        <div class=" col">
+                            <div class="item">
+                                <h5>التقرير</h5>
+                                <p id="output1" class="mb-0"></p>
+                            </div>
+                        </div>
+                        <div class=" col">
+                            <div class="item">
+                                <h5>عميل\مورد</h5>
+                                <p id="output2" class="mb-0"></p>
+                            </div>
+                        </div>
+                        <div class=" col">
+                            <div class="item">
+                                <h5>المخزن</h5>
+                                <p id="output3"></p>
+                            </div>
+                        </div>
+                        <div class=" col">
+                            <div class="item">
+                                <h5>الورديه</h5>
+                                <p id="output4"></p>
+                            </div>
+                        </div>
+                        <div class=" col">
+                            <div class="item">
+                                <h5>من تاريخ</h5>
+                                <p id="output5" ></p>
+                            </div>
+                        </div>
+                        <div class=" col">
+                            <div class="item mt-2">
+                                <h5>الي تاريخ</h5>
+                                <p id="output6"></p>
+                            </div>
+                        </div>
+                        <div class=" col">
+                            <div class="item mt-2">
+                                <h5>الموظف</h5>
+                                <p id="output7"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
